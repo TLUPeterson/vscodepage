@@ -5,7 +5,7 @@ export default function Topbar() {
   return (
     <div className="w-full h-12 bg-[#181818] text-white flex items-center px-4 border-b border-[#2b2b2b]">
       <div className="flex space-x-1">
-        <a href='#'>
+        <a href='www.github.com/TLUPeterson'>
           <Image src='/static/images/github.svg' width={30} height={30} alt='Github logo' />
         </a>
         <div>

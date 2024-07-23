@@ -44,14 +44,14 @@ const FileSystem = () => {
       >
         <Folder value="1" element="components">
           <Folder value="2" element="extension">
-            <File value="3" element="tree-view.tsx">
+            <File value="3" >
               <span>tree-view.tsx</span>
             </File>
-            <File value="4" element="tree-view-api.tsx">
+            <File value="4">
               <span>tree-view-api.tsx</span>
             </File>
           </Folder>
-          <File value="5" element="dashboard-tree.tsx">
+          <File value="5" >
             <a href='#'>dashboard-tree.tsx</a>
           </File>
         </Folder>

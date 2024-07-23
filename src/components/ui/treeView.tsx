@@ -257,8 +257,8 @@ const Folder = forwardRef<
           onClick={() => handleExpand(value)}
         >
           {expendedItems?.includes(value)
-            ? openIcon ?? <FolderOpenIcon className="h-4 w-4" />
-            : closeIcon ?? <FolderIcon className="h-4 w-4" />}
+            ? openIcon ?? <FolderOpenIcon className="h-4 w-4" color="#ef5350" strokeWidth={3} />
+            : closeIcon ?? <FolderIcon className="h-4 w-4" color="#ef5350" strokeWidth={3} />}
           <span>{element}</span>
         </AccordionPrimitive.Trigger>
         <AccordionPrimitive.Content className="text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down relative overflow-hidden h-full">
@@ -317,7 +317,7 @@ const File = forwardRef<
           disabled={!isSelectable}
           aria-label="File" 
           className={cn(
-            "flex items-center gap-1 cursor-pointer text-sm pr-1 rtl:pl-1 rtl:pr-0 rounded-md  duration-200 ease-in-out border-2 border-black",
+            "flex items-center gap-1 cursor-pointer text-sm pr-1 rtl:pl-1 rtl:pr-0 rounded-md  duration-200 ease-in-out border-2 border-[#181818]",
             {
               "bg-[#04395e] border-2 border-[#2e7ed6] rounded-none": isSelected && isSelectable,
             },
@@ -326,7 +326,7 @@ const File = forwardRef<
           )}
           onClick={() => selectItem(value)}
         >
-          {fileIcon ?? <FileIcon className="h-4 w-4" />}
+          {fileIcon ?? <FileIcon className="h-4 w-4" color='#0078d4' />}
           {children}
         </AccordionPrimitive.Trigger>
       </AccordionPrimitive.Item>

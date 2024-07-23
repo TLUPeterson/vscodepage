@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 //import { Inter, Courier_Prime } from "next/font/google";
 import localFont from 'next/font/local'
 import "./globals.css";
+import Topbar from "@/components/topbar";
+import Sidebar from "@/components/sidebar";
+import Terminal from "@/components/terminal";
+
 
 //const inter = Inter({ subsets: ["latin"] });
 //const courier = Courier_Prime({ weight: "400", subsets: ["latin-ext"] });
@@ -19,7 +23,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={myFont.className}>{children}</body>
+      <body className={myFont.className}>
+        <div className="flex flex-col h-screen overflow-hidden">
+          <Topbar />
+          <div className="flex flex-1 overflow-hidden">
+            <Sidebar />
+            <div className="flex flex-col flex-1 overflow-hidden">
+              {children}
+              <Terminal className="h-1/3" />
+            </div>
+          </div>
+        </div>
+      </body>
     </html>
   );
 }

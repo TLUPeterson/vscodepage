@@ -1,13 +1,13 @@
 'use client'
 import { useEffect, useRef, useState } from 'react';
 
-const Terminal = ({ className }) => {
-  const [commands, setCommands] = useState([]);
+const Terminal = ({ className }: { className: string }) => {
+  const [commands, setCommands] = useState<string[]>([]);
   const [currentInput, setCurrentInput] = useState('');
   const terminalRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
-  const handleKeyPress = (e) => {
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === 'Enter') {
       e.preventDefault();
       if (currentInput.trim()) {
@@ -29,13 +29,13 @@ const Terminal = ({ className }) => {
         <div className="">
           {commands.map((command, index) => (
             <div className='text-white' key={index}>
-              e:\location&gt; <span className='text-[#e7f543]'>{command}</span>
+              e:\projects&gt; <span className='text-[#e7f543]'>{command}</span>
             </div>
           ))}
         </div>
       </div>
       <div className="absolute bottom-0 left-0 w-90% flex items-center bg-[#181818] p-4">
-        <span className="text-white bg-[#181818]">e:\location&gt;</span>
+        <span className="text-white bg-[#181818]">e:\projects&gt;</span>
         <textarea
           className="bg-transparent text-[#e7f543] ml-2 focus:outline-none w-full resize-none"
           value={currentInput}

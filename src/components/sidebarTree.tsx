@@ -75,7 +75,7 @@ const SideBarTree: React.FC = () => {
 
   return (
     <div>
-      <Tree initialSelectedId={"5"} initialExpendedItems={["1", "2"]}>
+      <Tree initialSelectedId={"6"} initialExpendedItems={["1", "2"]}>
         {renderTree(elements)}
       </Tree>
     </div>

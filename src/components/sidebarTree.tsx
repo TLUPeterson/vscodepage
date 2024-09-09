@@ -54,18 +54,23 @@ const SideBarTree: React.FC = () => {
             },
             {
               id: "4",
+              name: "SolidParts.tsx",
+              url: "/projects/first/SolidParts"
+            },
+            {
+              id: "5",
               name: "tree-view-api.tsx",
               url: "/path/to/tree-view-api"
             },
           ],
         },
         {
-          id: "5",
+          id: "6",
           name: "editor.tsx",
           url: "/projects/editor"
         },
         {
-          id: "6",
+          id: "7",
           name: "overview.tsx",
           url: "/"
         },

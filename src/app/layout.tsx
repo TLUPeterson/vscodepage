@@ -5,6 +5,8 @@ import "./globals.css";
 import Topbar from "@/components/topbar";
 import Sidebar from "@/components/sidebar";
 import Terminal from "@/components/terminal";
+import { Suspense } from "react";
+import Loading from "@/components/loading";
 
 
 //const inter = Inter({ subsets: ["latin"] });
@@ -27,9 +29,13 @@ export default function RootLayout({
         <div className="flex flex-col h-screen overflow-hidden">
           <Topbar />
           <div className="flex flex-1 overflow-hidden">
-            <Sidebar />
+            <Suspense fallback={<Loading />}>
+              <Sidebar />
+            </Suspense>
             <div className="flex flex-col flex-1 overflow-hidden">
-              {children}
+              <Suspense fallback={<Loading />}>
+                {children}
+              </Suspense>
               <Terminal className="h-1/3" />
             </div>
           </div>

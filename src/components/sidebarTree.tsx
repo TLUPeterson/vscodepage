@@ -66,11 +66,22 @@ const SideBarTree: React.FC = () => {
         },
         {
           id: "6",
+          name: "path_of_exile",
+          children: [
+            {
+              id: "7",
+              name: "exilerng.tsx",
+              url: "/projects/pathofexile/exilerng"
+            },
+          ],
+        },
+        {
+          id: "8",
           name: "editor.tsx",
           url: "/projects/editor"
         },
         {
-          id: "7",
+          id: "9",
           name: "overview.tsx",
           url: "/"
         },
@@ -80,7 +91,7 @@ const SideBarTree: React.FC = () => {
 
   return (
     <div>
-      <Tree initialSelectedId={"6"} initialExpendedItems={["1", "2"]}>
+      <Tree initialSelectedId={"6"} initialExpendedItems={["1", "2", "6"]}>
         {renderTree(elements)}
       </Tree>
     </div>
